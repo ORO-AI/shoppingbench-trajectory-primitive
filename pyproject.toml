@@ -1,0 +1,25 @@
+[project]
+name = "shoppingbench-trajectory-primitive"
+version = "0.0.0"
+description = "ORO post-training: SFT corpus pipeline and filters."
+requires-python = ">=3.12"
+dependencies = [
+    "modal>=0.64",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-m 'not modal'"
+markers = [
+    "modal: integration tests requiring Modal credentials (skipped by default)",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
