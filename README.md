@@ -4,6 +4,8 @@
 
 Code companion for the paper **Bittensor Agent Arenas as a Trajectory Primitive: Distilling a Shopping Agent from ShoppingBench Subnet Traces** (Bansal, Schilbe, Barnes).
 
+ORO AI's current research on business simulations is [SMB Bench](https://oroagents.com/benchmarks/smb-bench); this study's page is [ShoppingBench](https://oroagents.com/benchmarks/shoppingbench).
+
 This repository contains the working code behind the paper: the structural-quality **filter** that turns the raw ORO Subnet 15 (SN15) trajectory firehose into a trainable corpus, plus the post-training (SFT, reward-weighted rejection sampling, KTO, Dr. GRPO) and evaluation pipelines used to distill Qwen3-4B from 18.0% to 42.7% ASR on a leak-cluster-guarded, production-strict held-out partition.
 
 It is a curated extraction from an internal research repo: only the canonical, working code referenced in the paper is included. Trial scripts, debug/smoke runs, and superseded iterations were intentionally left out.
